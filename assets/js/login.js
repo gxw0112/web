@@ -34,7 +34,8 @@ $(function () {
             username: $('#form_reg [name=username]').val(),
             password: $('#form_reg [name=password]').val()
         }
-        $.post('http://ajax.frontend.itheima.net/api/reguser', data, function (res) {
+        // http://api-breakingnews-web.itheima.net/
+        $.post('/api/reguser', data, function (res) {
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
